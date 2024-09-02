@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R语言与精算数据科学</title>
+  <meta name="description" content="R语言与精算数据科学" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R语言与精算数据科学" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Rlogo.pdf" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R语言与精算数据科学" />
+  
+  
+  <meta name="twitter:image" content="/Rlogo.pdf" />
+
+<meta name="author" content="张连增 李浩男" />
+
+
+<meta name="date" content="2024-09-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="你好-r.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R语言与精算数据科学</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 前言</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#为什么选择r"><i class="fa fa-check"></i><b>1.1</b> 为什么选择R？</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#精算与r语言"><i class="fa fa-check"></i><b>1.2</b> 精算与R语言</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="你好-r.html"><a href="你好-r.html"><i class="fa fa-check"></i><b>2</b> 你好, R!</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="你好-r.html"><a href="你好-r.html#r-软件-安装-r-和-rstudio"><i class="fa fa-check"></i><b>2.1</b> R 软件: 安装 R 和 RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="你好-r.html"><a href="你好-r.html#r-gui软件交互界面"><i class="fa fa-check"></i><b>2.2</b> R GUI软件交互界面</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="你好-r.html"><a href="你好-r.html#中断和退出r"><i class="fa fa-check"></i><b>2.2.1</b> 中断和退出R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="你好-r.html"><a href="你好-r.html#rstudio-软件"><i class="fa fa-check"></i><b>2.3</b> RStudio 软件</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="你好-r.html"><a href="你好-r.html#控制台窗口"><i class="fa fa-check"></i><b>2.3.1</b> 控制台窗口</a></li>
+<li class="chapter" data-level="2.3.2" data-path="你好-r.html"><a href="你好-r.html#编辑器窗口"><i class="fa fa-check"></i><b>2.3.2</b> 编辑器窗口</a></li>
+<li class="chapter" data-level="2.3.3" data-path="你好-r.html"><a href="你好-r.html#工作区窗口"><i class="fa fa-check"></i><b>2.3.3</b> 工作区窗口</a></li>
+<li class="chapter" data-level="2.3.4" data-path="你好-r.html"><a href="你好-r.html#文件等窗口"><i class="fa fa-check"></i><b>2.3.4</b> 文件等窗口</a>
+<ul>
+<li class="chapter" data-level="2.3.4.1" data-path="你好-r.html"><a href="你好-r.html#files"><i class="fa fa-check"></i><b>2.3.4.1</b> Files</a></li>
+<li class="chapter" data-level="2.3.4.2" data-path="你好-r.html"><a href="你好-r.html#plots"><i class="fa fa-check"></i><b>2.3.4.2</b> Plots</a></li>
+<li class="chapter" data-level="2.3.4.3" data-path="你好-r.html"><a href="你好-r.html#packages"><i class="fa fa-check"></i><b>2.3.4.3</b> Packages</a></li>
+<li class="chapter" data-level="2.3.4.4" data-path="你好-r.html"><a href="你好-r.html#help"><i class="fa fa-check"></i><b>2.3.4.4</b> Help</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="你好-r.html"><a href="你好-r.html#定义工作目录"><i class="fa fa-check"></i><b>2.4</b> 定义工作目录</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="你好-r.html"><a href="你好-r.html#使用相对路径"><i class="fa fa-check"></i><b>2.4.1</b> 使用相对路径</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="你好-r.html"><a href="你好-r.html#保存r对象和工作空间"><i class="fa fa-check"></i><b>2.5</b> 保存R对象和工作空间</a></li>
+<li class="chapter" data-level="2.6" data-path="你好-r.html"><a href="你好-r.html#r-包"><i class="fa fa-check"></i><b>2.6</b> R 包</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank"></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R语言与精算数据科学</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">R语言与精算数据科学</h1>
+<p class="author"><em>张连增 李浩男</em></p>
+<p class="date"><em>2024-09-02</em></p>
+</div>
+<div id="前言" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> 前言<a href="index.html#前言" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>R语言是一种专门用于统计分析和数据可视化的编程语言和软件环境。它由统计学家Ross Ihaka和Robert Gentleman于1993年开发，并且是基于S语言的一种实现。R语言在学术界、统计学界、数据科学以及相关领域中被广泛使用。</p>
+<div id="为什么选择r" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> 为什么选择R？<a href="index.html#为什么选择r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>强大的统计功能</strong>： R语言内置了丰富的统计分析功能，支持回归分析、假设检验、时间序列分析、聚类分析等多种统计方法，且不断有新的包和函数被开发和维护。</p></li>
+<li><p><strong>数据可视化</strong>：R语言提供了强大的数据可视化功能，尤其是通过<code>ggplot2</code>包可以创建高度定制化和复杂的图表。R语言支持的图表种类非常多样，包括散点图、柱状图、箱线图、热图等。</p></li>
+<li><p><strong>开放性与扩展性</strong>：R是一个开源项目，拥有庞大的用户和开发者社区。CRAN（Comprehensive R Archive Network）上有数千个扩展包，覆盖了几乎所有的数据分析需求，从生物信息学到金融分析。</p></li>
+<li><p><strong>与其他语言和工具的兼容性</strong>：R可以与其他编程语言（如Python、C++）以及数据管理工具（如SQL、Hadoop）集成，这使得它能够处理大型数据集，并与其他数据处理工作流无缝衔接。</p></li>
+<li><p><strong>交互性和易用性</strong>：R语言有丰富的交互式环境（如RStudio），用户可以方便地编写、调试代码，并实时查看分析结果。此外，R语言的语法相对直观，适合统计学背景的用户。</p></li>
+<li><p><strong>广泛的应用领域</strong>：R在金融、医药、生物信息学、社会科学等多个领域都有广泛应用。它被用于学术研究、数据科学项目以及商业分析中。</p></li>
+</ol>
+</div>
+<div id="精算与r语言" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> 精算与R语言<a href="index.html#精算与r语言" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>精算学是一个集数学、统计学、经济学、金融学及计算机科学于一体的综合性学科，它专注于对金融风险和不确定性进行量化评估，为保险、养老金、投资等行业提供决策支持。而R语言作为一种强大的统计分析和图形展示工具，在精算领域的应用日益广泛，以下是几个主要原因：</p>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>数据分析和建模：精算师需要处理大量数据，包括保险赔付记录、客户资料、市场趋势等。R语言提供了丰富的统计和数据分析包（如<code>ggplot2</code>用于数据可视化，<code>dplyr</code>和<code>tidyr</code>用于数据清洗和整理，<code>lm</code>、<code>glm</code>等函数用于线性模型和非线性模型拟合），能够高效地帮助精算师进行数据清洗、探索性数据分析、模型构建和验证等步骤。</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>风险管理和预测：精算的核心工作之一是评估未来风险并制定相应的保险费率、准备金等。R语言能够支持各种复杂的预测模型，如时间序列分析（<code>forecast</code>包）、生存分析（<code>survival</code>包）以及机器学习算法（通过<code>caret</code>、<code>randomForest</code>等包），这些工具对于预测保险损失、评估长寿风险等至关重要。</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: decimal">
+<li>报告和可视化：精算师需要向管理层、监管机构或客户报告分析结果。R语言不仅能处理复杂的数据分析，还能生成高质量的图形和报告，通过R Markdown、Shiny等工具，可以轻松地创建交互式报告和仪表板，使数据分析和结果呈现更加直观和易于理解。</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: decimal">
+<li>行业趋势和前沿技术：随着大数据和人工智能的发展，精算行业也在不断探索新技术的应用。R语言作为开源社区活跃的统计软件，不断吸收和整合新的算法和技术，如深度学习、自然语言处理等，为精算师提供了接触和应用前沿技术的平台。</li>
+</ol></li>
+<li><ol start="5" style="list-style-type: decimal">
+<li>就业竞争力：掌握R语言将极大地提升精算专业学生的就业竞争力。在保险、金融等行业，具备数据分析能力的人才越来越受到重视。能够熟练运用R语言进行数据分析、模型构建和报告呈现的学生，在求职过程中将更具优势。</li>
+</ol></li>
+</ul>
+<p>在CRAN网站中包含了专门针对精算学的R语言项目集合，参考<a href="https://cran.r-project.org/web/views/ActuarialScience.html">https://cran.r-project.org/web/views/ActuarialScience.html</a>。其中提供了一系列R包，覆盖了寿险精算中的生存分析、死亡率模型；非寿险计算中的损失模型、产品定价、准备金计算；再保险与极值理论；精算相关的数据集等内容。</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="你好-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
